@@ -1,0 +1,235 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analyser un canal de transmission avec Python — Portfolio</title>
+    <meta name="description"
+        content="Découvrez : Analyser un canal de transmission avec Python. Portfolio de Fahd Cliquet-Benbrahim, étudiant en BUT Réseaux et Télécommunications (Cybersécurité) à l'IUT de Vélizy." />
+    <meta name="author" content="Fahd Cliquet-Benbrahim" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+
+</head>
+
+<body class="theme-telecoms">
+
+    <div class="bg-grid"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+
+    <div class="category-page">
+
+        <script src="../../assets/js/header.js" defer></script>
+
+        <!-- ══════════ PROJECT HERO ══════════ -->
+        <div class="project-hero">
+            <span class="project-hero-badge">Télécoms &amp; Signal — 1ère Année</span>
+            <h1>Analyser un canal de<br />transmission avec <span class="gradient-text">Python</span></h1>
+            <div class="project-meta">
+                <span class="project-meta-pill">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="3" width="20" height="14" rx="2" />
+                        <path d="M8 21h8M12 17v4" />
+                    </svg>
+                    SAE 1.3
+                </span>
+                <span class="project-meta-pill">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                        <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                    </svg>
+                    BUT R&amp;T — Semestre 1
+                </span>
+                <span class="project-meta-pill">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10" />
+                        <polyline points="12 6 12 12 16 14" />
+                    </svg>
+                    1 semaine
+                </span>
+                <span class="project-meta-pill">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                        <circle cx="9" cy="7" r="4" />
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                    </svg>
+                    Binôme
+                </span>
+                <span class="project-meta-pill">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                        <circle cx="12" cy="10" r="3" />
+                    </svg>
+                    IUT Vélizy — UVSQ
+                </span>
+            </div>
+        </div>
+
+        <!-- ══════════ CONTENT ══════════ -->
+        <div class="project-body">
+
+            <!-- Accroche -->
+            <div class="contexte-row">
+                <div class="proj-section">
+                    <span class="proj-section-label">CONTEXTE</span>
+                    <h2>Pourquoi ce projet ?</h2>
+                    <p class="accroche-text">
+                        Dans un réseau <strong>ADSL</strong>, le DSLAM mesure la <strong>réponse en
+                            fréquence</strong>
+                        de la ligne téléphonique pour adapter le débit à la qualité du câble.
+                        Dans ce projet, on a reproduit ce principe entre deux PCs reliés par leurs <strong>cartes
+                            son</strong> :
+                        émettre des sinusoïdes, mesurer ce qui arrive de l'autre côté, et en déduire le comportement
+                        fréquentiel du canal.
+                    </p>
+                </div>
+
+                <div class="proj-section contexte-img-card">
+                    <img src="../../assets/images/adsl-network.png" alt="Exemple d'un réseau ADSL" />
+                    <span class="contexte-img-caption">Figure 1 : Exemple d'un réseau ADSL</span>
+                </div>
+            </div>
+
+            <!-- Objectifs -->
+            <div class="proj-section inline-539b04">
+                <span class="proj-section-label">OBJECTIFS</span>
+                <h2>Ce qu'on devait réaliser</h2>
+                <img src="../../assets/images/objectifs-gears.png" alt="Objectifs du projet — diagramme en engrenages"
+                    class="inline-dc254f" />
+
+            </div>
+
+            <!-- Technologies -->
+            <div class="proj-section">
+                <span class="proj-section-label">TECHNOLOGIES</span>
+                <h2>Outils utilisés</h2>
+                <div class="tech-grid">
+                    <div class="tech-badge tech-python">
+                        <div class="tech-icon">Py</div>
+                        <div class="tech-info">
+                            <span class="tech-name">Python</span>
+                            <span class="tech-desc">Langage principal</span>
+                        </div>
+                    </div>
+                    <div class="tech-badge tech-numpy">
+                        <div class="tech-icon">Np</div>
+                        <div class="tech-info">
+                            <span class="tech-name">NumPy</span>
+                            <span class="tech-desc">Génération de signaux</span>
+                        </div>
+                    </div>
+                    <div class="tech-badge tech-sound">
+                        <div class="tech-icon">♪</div>
+                        <div class="tech-info">
+                            <span class="tech-name">Sounddevice</span>
+                            <span class="tech-desc">Émission &amp; réception audio</span>
+                        </div>
+                    </div>
+                    <div class="tech-badge tech-mpl">
+                        <div class="tech-icon">📈</div>
+                        <div class="tech-info">
+                            <span class="tech-name">Matplotlib</span>
+                            <span class="tech-desc">Tracé de graphes</span>
+                        </div>
+                    </div>
+                    <div class="tech-badge tech-jupyter">
+                        <div class="tech-icon">Jn</div>
+                        <div class="tech-info">
+                            <span class="tech-name">Jupyter Notebook</span>
+                            <span class="tech-desc">Rendu et évaluation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fonctionnement -->
+            <div class="proj-section">
+                <span class="proj-section-label">FONCTIONNEMENT</span>
+                <h2>Comment ça marche</h2>
+
+                <!-- Signal flow diagram -->
+                <div class="signal-flow">
+                    <div class="flow-node">
+                        <div class="flow-node-icon pc">💻</div>
+                        <span class="flow-node-label">PC Émetteur</span>
+                        <span class="flow-node-sub">Python + signal</span>
+                    </div>
+                    <span class="flow-arrow">→</span>
+                    <div class="flow-node">
+                        <div class="flow-node-icon card">🔊</div>
+                        <span class="flow-node-label">Carte Son</span>
+                        <span class="flow-node-sub">USB — sortie</span>
+                    </div>
+                    <span class="flow-arrow">→</span>
+                    <div class="flow-node">
+                        <div class="flow-node-icon cable">🔌</div>
+                        <span class="flow-node-label">Câble</span>
+                        <span class="flow-node-sub">Canal à mesurer</span>
+                    </div>
+                    <span class="flow-arrow">→</span>
+                    <div class="flow-node">
+                        <div class="flow-node-icon card">🎙️</div>
+                        <span class="flow-node-label">Carte Son</span>
+                        <span class="flow-node-sub">USB — entrée</span>
+                    </div>
+                    <span class="flow-arrow">→</span>
+                    <div class="flow-node">
+                        <div class="flow-node-icon pc">💻</div>
+                        <span class="flow-node-label">PC Récepteur</span>
+                        <span class="flow-node-sub">Mesure + tracé</span>
+                    </div>
+                </div>
+
+                <!-- Two steps -->
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-card-num">Étape 01</div>
+                        <h3>Mesure manuelle</h3>
+                        <p>Envoi d'une fréquence à la fois, relevé de l'amplitude reçue, puis calcul du gain et tracé
+                            point par point de la réponse en fréquence.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-card-num">Étape 02</div>
+                        <h3>Automatisation</h3>
+                        <p>Le récepteur se met en attente, l'émetteur envoie toutes les fréquences en séquence
+                            automatiquement, et le graphe H(f) se trace en temps réel.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Résultats -->
+            <div class="proj-section">
+                <span class="proj-section-label">RÉSULTATS</span>
+                <h2>Résultats obtenus</h2>
+                <div class="results-placeholder">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M12 6v6l4 2" />
+                    </svg>
+                    Résultats à venir…
+                </div>
+            </div>
+
+        </div>
+
+        <script src="../../assets/js/footer.js" defer></script>
+
+    </div>
+
+</body>
+
+</html>
+

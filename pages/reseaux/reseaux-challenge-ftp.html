@@ -1,0 +1,268 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Challenge FTP — Portfolio</title>
+    <meta name="description"
+        content="Découvrez : Challenge FTP. Portfolio de Fahd Cliquet-Benbrahim, étudiant en BUT Réseaux et Télécommunications (Cybersécurité) à l'IUT de Vélizy." />
+    <meta name="author" content="Fahd Cliquet-Benbrahim" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+
+</head>
+
+<body class="theme-cyber">
+
+    <div class="bg-grid"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+
+    <div class="category-page">
+
+        <script src="../../assets/js/header.js" defer></script>
+
+        <!-- ══════════ PROJECT HERO ══════════ -->
+        <div class="project-hero">
+            <span class="project-hero-badge">Projet Cyber — Semestre 1</span>
+            <h1>SAE 1.1 — <span class="gradient-text">Challenge FTP</span></h1>
+            <div class="project-meta">
+                <span class="project-meta-pill">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                        <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                    </svg>
+                    BUT R&amp;T — Semestre 1
+                </span>
+                <span class="project-meta-pill">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10" />
+                        <polyline points="12 6 12 12 16 14" />
+                    </svg>
+                    1 semaine (16-20 déc.)
+                </span>
+                <span class="project-meta-pill">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                        <circle cx="9" cy="7" r="4" />
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                    </svg>
+                    Travail en binôme
+                </span>
+                <span class="project-meta-pill">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                        <circle cx="12" cy="10" r="3" />
+                    </svg>
+                    IUT Vélizy — UVSQ
+                </span>
+            </div>
+        </div>
+
+        <!-- ══════════ CONTENT ══════════ -->
+        <div class="project-body">
+
+            <!-- Contexte -->
+            <div class="proj-section">
+                <span class="proj-section-label">CONTEXTE</span>
+                <h2>Interception FTP &amp; CTF</h2>
+                <p class="accroche-text">
+                    Un <strong>CTF (Capture The Flag)</strong> est un exercice de cybersécurité où l'on enchaîne des
+                    défis pour extraire une information cachée — un mot de passe, un fichier, un message secret. C'est
+                    le type d'exercice pratiqué par les <strong>pentesters</strong> (testeurs d'intrusion), l'un des
+                    métiers les plus recherchés en cybersécurité.<br><br>
+                    Pour ce premier CTF, la mission était scénarisée à la sauce Star Wars : intercepter et décoder un
+                    message chiffré transmis par les Sith via une communication FTP capturée sur le réseau.
+                </p>
+            </div>
+
+            <!-- Objectifs -->
+            <div class="proj-section">
+                <span class="proj-section-label">OBJECTIFS</span>
+                <h2>Missions du projet</h2>
+                <ul class="objectives-list">
+                    <li>
+                        <span class="obj-num">1</span>
+                        <span class="obj-text">Analyser une <strong>capture réseau Wireshark</strong> (fichier .pcapng)
+                            et comprendre le protocole FTP en détail.</span>
+                    </li>
+                    <li>
+                        <span class="obj-num">2</span>
+                        <span class="obj-text">Écrire des <strong>scripts Python avec Scapy</strong> pour extraire
+                            automatiquement le login, le mot de passe et le fichier transféré.</span>
+                    </li>
+                    <li>
+                        <span class="obj-num">3</span>
+                        <span class="obj-text"><strong>Décoder un message chiffré</strong> par substitution alphabétique
+                            avec un programme Python.</span>
+                    </li>
+                    <li>
+                        <span class="obj-num">4</span>
+                        <span class="obj-text">Mettre en place un <strong>sniffeur FTP en temps réel</strong> capable de
+                            capturer login, mot de passe et fichiers à la volée.</span>
+                    </li>
+                    <li>
+                        <span class="obj-num">5</span>
+                        <span class="obj-text">Comprendre et expliquer le principe d'une attaque
+                            <strong>Man-In-The-Middle (MITM)</strong>.</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Technologies -->
+            <div class="proj-section">
+                <span class="proj-section-label">TECHNOLOGIES</span>
+                <h2>Outils &amp; environnements</h2>
+                <div class="tech-grid">
+                    <div class="tech-badge tech-wireshark">
+                        <div class="tech-icon">🦈</div>
+                        <div class="tech-info">
+                            <span class="tech-name">Wireshark</span>
+                            <span class="tech-desc">Analyse manuelle de la capture réseau FTP</span>
+                        </div>
+                    </div>
+                    <div class="tech-badge tech-python">
+                        <div class="tech-icon">Py</div>
+                        <div class="tech-info">
+                            <span class="tech-name">Python + Scapy</span>
+                            <span class="tech-desc">Parsing automatique des paquets FTP et extraction</span>
+                        </div>
+                    </div>
+                    <div class="tech-badge tech-filezilla">
+                        <div class="tech-icon">Fz</div>
+                        <div class="tech-info">
+                            <span class="tech-name">FileZilla</span>
+                            <span class="tech-desc">Client et serveur FTP pour les tests réels</span>
+                        </div>
+                    </div>
+                    <div class="tech-badge tech-jupyter">
+                        <div class="tech-icon">Jp</div>
+                        <div class="tech-info">
+                            <span class="tech-name">Jupyter Notebook</span>
+                            <span class="tech-desc">Rendu du CTF avec code + explications pas à pas</span>
+                        </div>
+                    </div>
+                    <div class="tech-badge tech-rootme">
+                        <div class="tech-icon">💀</div>
+                        <div class="tech-info">
+                            <span class="tech-name">Root-Me</span>
+                            <span class="tech-desc">Plateforme de challenges CTF (formation)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Étapes -->
+            <div class="proj-section">
+                <span class="proj-section-label">DÉROULEMENT</span>
+                <h2>Les 4 grandes étapes du CTF</h2>
+                <div class="chain-steps">
+                    <div class="chain-step">
+                        <span class="chain-step-num">Étape 01</span>
+                        <span class="chain-step-text"><strong>Analyse de la capture Wireshark</strong> : Identification
+                            du protocole FTP, de l'IP client/serveur, des ports TCP, du mode actif/passif, et
+                            récupération manuelle du login/mot de passe transmis <strong>en clair</strong> dans les
+                            paquets.</span>
+                    </div>
+                    <div class="chain-step">
+                        <span class="chain-step-num">Étape 02</span>
+                        <span class="chain-step-text"><strong>Extraction automatique</strong> : Écriture d'un script
+                            Scapy qui charge la capture .pcapng, identifie les paquets pertinents, et extrait
+                            automatiquement login, mot de passe, port de transfert et reconstitue le fichier.</span>
+                    </div>
+                    <div class="chain-step">
+                        <span class="chain-step-num">Étape 03</span>
+                        <span class="chain-step-text"><strong>Décodage du message</strong> : Le fichier extrait
+                            contenait un message chiffré par <strong>substitution alphabétique</strong>. Un programme
+                            Python utilisant la méthode find() a permis de le décoder automatiquement.</span>
+                    </div>
+                    <div class="chain-step">
+                        <span class="chain-step-num">Étape 04</span>
+                        <span class="chain-step-text"><strong>Sniffing en temps réel</strong> : Un script Python
+                            autonome sniffe les paquets FTP en direct sur le réseau et enregistre automatiquement tout
+                            fichier transféré avec son nom d'origine.</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Résultats -->
+            <div class="proj-section">
+                <span class="proj-section-label">RÉSULTATS</span>
+                <h2>Preuves &amp; démonstrations</h2>
+                <div class="results-grid">
+                    <div class="result-card">
+                        <div class="result-icon">🦈</div>
+                        <div class="result-text">Capture Wireshark annotée (champs FTP identifiés)</div>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-icon">📓</div>
+                        <div class="result-text">Extrait du notebook d'extraction avec Scapy</div>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-icon">🪐</div>
+                        <div class="result-text">Message décodé : date et planète de l'attaque Sith (le Flag !)</div>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-icon">🕵️</div>
+                        <div class="result-text">Démonstration du script de sniffing temps réel avec FileZilla</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Compétences -->
+            <div class="proj-section">
+                <span class="proj-section-label">COMPÉTENCES</span>
+                <h2>Ce que j'ai appris</h2>
+                <ul class="skills-learned">
+                    <li>
+                        <span class="skill-icon">🔍</span>
+                        <span><strong>Analyse de captures réseau</strong> avec Wireshark : lecture des trames,
+                            protocoles, données.</span>
+                    </li>
+                    <li>
+                        <span class="skill-icon">📂</span>
+                        <span>Compréhension approfondie du <strong>protocole FTP</strong> (modes actif/passif,
+                            négociation, clair).</span>
+                    </li>
+                    <li>
+                        <span class="skill-icon">🐍</span>
+                        <span>Programmation <strong>Python &amp; Scapy</strong> : parsing de paquets, filtrage,
+                            extraction.</span>
+                    </li>
+                    <li>
+                        <span class="skill-icon">🔐</span>
+                        <span>Introduction à la <strong>cryptographie</strong> : chiffrement par substitution et
+                            décodage.</span>
+                    </li>
+                    <li>
+                        <span class="skill-icon">⚠️</span>
+                        <span>Sensibilisation aux <strong>risques de sécurité</strong> : protocoles non chiffrés,
+                            MITM.</span>
+                    </li>
+                    <li>
+                        <span class="skill-icon">🎯</span>
+                        <span>Découverte des plateformes CTF (<strong>Root-Me, HackTheBox, VulnHub</strong>).</span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <script src="../../assets/js/footer.js" defer></script>
+
+    </div>
+
+</body>
+
+</html>
+

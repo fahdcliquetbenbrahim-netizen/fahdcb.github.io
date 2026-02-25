@@ -1,0 +1,313 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diagnostic ADSL/VDSL2 — Portfolio</title>
+    <meta name="description"
+        content="Découvrez : Diagnostic ADSL/VDSL2. Portfolio de Fahd Cliquet-Benbrahim, étudiant en BUT Réseaux et Télécommunications (Cybersécurité) à l'IUT de Vélizy." />
+    <meta name="author" content="Fahd Cliquet-Benbrahim" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+
+</head>
+
+<body class="theme-telecoms">
+
+    <div class="bg-grid"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+
+    <div class="category-page">
+
+        <script src="../../assets/js/header.js" defer></script>
+
+        <!-- ══════════ PROJECT HERO ══════════ -->
+        <div class="project-hero">
+            <span class="project-hero-badge">Télécoms &amp; Signal — 2ème Année</span>
+            <h1>Application web full-stack de<br />diagnostic <span class="gradient-text">ADSL/VDSL2</span></h1>
+            <div class="project-meta">
+                <span class="project-meta-pill">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="3" width="20" height="14" rx="2" />
+                        <path d="M8 21h8M12 17v4" />
+                    </svg>
+                    SAE 3.2
+                </span>
+                <span class="project-meta-pill">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                        <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                    </svg>
+                    BUT R&amp;T — Semestre 3
+                </span>
+                <span class="project-meta-pill">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10" />
+                        <polyline points="12 6 12 12 16 14" />
+                    </svg>
+                    49h (16h + 30h + 3h)
+                </span>
+                <span class="project-meta-pill">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                        <circle cx="9" cy="7" r="4" />
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                    </svg>
+                    Groupe de 3
+                </span>
+                <span class="project-meta-pill">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                        <circle cx="12" cy="10" r="3" />
+                    </svg>
+                    IUT Vélizy — UVSQ
+                </span>
+            </div>
+        </div>
+
+        <!-- ══════════ CONTENT ══════════ -->
+        <div class="project-body">
+
+            <!-- Contexte -->
+            <div class="proj-section">
+                <span class="proj-section-label">CONTEXTE</span>
+                <h2>Un vrai problème opérateur</h2>
+                <p class="accroche-text">
+                    Chez <strong>Orange</strong>, des équipes entières sont dédiées à détecter les perturbateurs
+                    électromagnétiques (moteurs d'ascenseur, alimentations défectueuses…) qui dégradent les lignes
+                    ADSL des abonnés et font chuter les débits. Ce projet répond à une vraie problématique opérateur :
+                    construire une <strong>application web complète</strong> permettant à un technicien de se connecter
+                    à n'importe quel DSLAM, d'analyser les paramètres de la ligne, et de comparer son état actuel
+                    avec son état normal stocké en <strong>base de données</strong>.
+                </p>
+            </div>
+
+            <!-- Objectifs -->
+            <div class="proj-section">
+                <span class="proj-section-label">OBJECTIFS</span>
+                <h2>Ce qu'on devait réaliser</h2>
+
+                <div class="obj-group-title">Côté Télécoms</div>
+                <ul class="objectives-list">
+                    <li>
+                        <span class="obj-num">1</span>
+                        <span class="obj-text">Comprendre la modulation <strong>OFDM/DMT</strong> utilisée en
+                            ADSL/VDSL2</span>
+                    </li>
+                    <li>
+                        <span class="obj-num">2</span>
+                        <span class="obj-text">Analyser les 4 paramètres de ligne : <strong>QLN, SNR, HLOG</strong> et
+                            <strong>BitAlloc</strong></span>
+                    </li>
+                    <li>
+                        <span class="obj-num">3</span>
+                        <span class="obj-text">Étudier l'impact de <strong>perturbateurs électromagnétiques</strong> sur
+                            une ligne de 2 km réelle</span>
+                    </li>
+                </ul>
+
+                <div class="obj-group-title">Côté Informatique</div>
+                <ul class="objectives-list">
+                    <li>
+                        <span class="obj-num">4</span>
+                        <span class="obj-text">Concevoir une <strong>API REST asynchrone</strong> avec FastAPI et
+                            Python</span>
+                    </li>
+                    <li>
+                        <span class="obj-num">5</span>
+                        <span class="obj-text">Développer le front-end en <strong>HTML/CSS/JavaScript</strong> avec
+                            Chart.js pour l'affichage des courbes</span>
+                    </li>
+                    <li>
+                        <span class="obj-num">6</span>
+                        <span class="obj-text">Implémenter une base de données <strong>NoSQL MongoDB</strong> pour
+                            stocker les profils de lignes</span>
+                    </li>
+                    <li>
+                        <span class="obj-num">7</span>
+                        <span class="obj-text">Automatiser la connexion <strong>SSH aux DSLAM</strong> avec
+                            Paramiko/asyncssh</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Architecture -->
+            <div class="proj-section">
+                <span class="proj-section-label">ARCHITECTURE</span>
+                <h2>Architecture 3-tiers</h2>
+                <table class="archi-table">
+                    <thead>
+                        <tr>
+                            <th>Couche</th>
+                            <th>Technologie</th>
+                            <th>Rôle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Front-end</td>
+                            <td>Nginx + HTML/JS/Chart.js</td>
+                            <td>Interface web, affichage des courbes, requêtes HTTP</td>
+                        </tr>
+                        <tr>
+                            <td>Back-end</td>
+                            <td>Python FastAPI (async)</td>
+                            <td>API REST, proxy vers DSLAM et MongoDB</td>
+                        </tr>
+                        <tr>
+                            <td>Base de données</td>
+                            <td>MongoDB (NoSQL)</td>
+                            <td>Stockage des profils de lignes en BSON</td>
+                        </tr>
+                        <tr>
+                            <td>Connexion DSLAM</td>
+                            <td>Paramiko / asyncssh</td>
+                            <td>Connexion SSH, commandes CLI, parsing</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Technologies -->
+            <div class="proj-section">
+                <span class="proj-section-label">TECHNOLOGIES</span>
+                <h2>Outils utilisés</h2>
+                <div class="tech-grid">
+                    <div class="tech-badge tech-python">
+                        <div class="tech-icon">Py</div>
+                        <div class="tech-info">
+                            <span class="tech-name">Python</span>
+                            <span class="tech-desc">asyncio, FastAPI, Paramiko, asyncssh, Matplotlib, Re</span>
+                        </div>
+                    </div>
+                    <div class="tech-badge tech-js">
+                        <div class="tech-icon">JS</div>
+                        <div class="tech-info">
+                            <span class="tech-name">JavaScript</span>
+                            <span class="tech-desc">fetch, événementiel, Chart.js</span>
+                        </div>
+                    </div>
+                    <div class="tech-badge tech-mongo">
+                        <div class="tech-icon">Mg</div>
+                        <div class="tech-info">
+                            <span class="tech-name">MongoDB</span>
+                            <span class="tech-desc">NoSQL orientée document, BSON/JSON</span>
+                        </div>
+                    </div>
+                    <div class="tech-badge tech-nginx">
+                        <div class="tech-icon">Nx</div>
+                        <div class="tech-info">
+                            <span class="tech-name">Nginx</span>
+                            <span class="tech-desc">Serveur web + proxy inverse</span>
+                        </div>
+                    </div>
+                    <div class="tech-badge tech-linux">
+                        <div class="tech-icon">🐧</div>
+                        <div class="tech-info">
+                            <span class="tech-name">Linux</span>
+                            <span class="tech-desc">Serveur SSH + RDP, VM bridgée</span>
+                        </div>
+                    </div>
+                    <div class="tech-badge tech-dslam">
+                        <div class="tech-icon">📟</div>
+                        <div class="tech-info">
+                            <span class="tech-name">DSLAM Zyxel VES1724-56</span>
+                            <span class="tech-desc">Équipement réseau réel, CLI</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fonctionnement -->
+            <div class="proj-section">
+                <span class="proj-section-label">FONCTIONNEMENT</span>
+                <h2>Parcours utilisateur</h2>
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-card-num">Étape 01</div>
+                        <h3>Sélection du DSLAM</h3>
+                        <p>Menu déroulant alimenté dynamiquement via <strong>GET /api/dslams</strong>. Le technicien
+                            choisit l'équipement à interroger.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-card-num">Étape 02</div>
+                        <h3>Choix des paramètres</h3>
+                        <p>Sélection de la ligne, du paramètre (<strong>QLN / SNR / HLOG / BitAlloc / Tous</strong>) et
+                            du mode : analyse, comparaison ou enregistrement.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-card-num">Étape 03</div>
+                        <h3>Affichage des résultats</h3>
+                        <p>Graphique <strong>Chart.js</strong> dans le navigateur avec support multi-axes pour afficher
+                            les 4 paramètres simultanément.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tests sur ligne réelle -->
+            <div class="proj-section">
+                <span class="proj-section-label">TESTS EN LABO</span>
+                <h2>Tests sur ligne réelle</h2>
+                <p class="inline-14c80d">
+                    C'est ce qui distingue ce projet — travail sur du <strong>matériel réel</strong> en labo avec une
+                    ligne ADSL2+ simulée à l'aide de bobines de câble de 1 km (2 km total).
+                </p>
+                <div class="tests-grid">
+                    <div class="test-card">
+                        <h3>🔊 Perturbateur sinusoïdal</h3>
+                        <p>Antenne AM + GBF placés près du câble. Observation de la <strong>chute du SNR</strong> et
+                            adaptation automatique de la modulation sur les sous-porteuses affectées.</p>
+                        <span class="test-highlight">Impact → SNR</span>
+                    </div>
+                    <div class="test-card">
+                        <h3>⚡ Alimentation défectueuse</h3>
+                        <p>Alimentation posée à proximité du câble. Impact direct sur le <strong>BitAlloc</strong> :
+                            réduction du nombre de bits par symbole sur les fréquences perturbées.</p>
+                        <span class="test-highlight">Impact → BitAlloc</span>
+                    </div>
+                </div>
+                <div class="test-card inline-f4e330">
+                    <h3>📊 Analyse statistique</h3>
+                    <p>Calcul du <strong>SNR min/max/moyen</strong> par nombre de bits par symbole (0 à 15) avec
+                        <code>defaultdict</code> et <code>tabulate</code>. Permet de quantifier précisément l'impact de
+                        chaque perturbateur.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Résultats -->
+            <div class="proj-section">
+                <span class="proj-section-label">RÉSULTATS</span>
+                <h2>Résultats obtenus</h2>
+                <div class="results-placeholder">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M12 6v6l4 2" />
+                    </svg>
+                    Résultats à venir…
+                </div>
+            </div>
+
+        </div>
+
+        <script src="../../assets/js/footer.js" defer></script>
+
+    </div>
+
+</body>
+
+</html>
+

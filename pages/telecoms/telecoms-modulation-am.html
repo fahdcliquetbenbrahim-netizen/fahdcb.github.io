@@ -1,0 +1,286 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modulation AM &amp; Translation de fréquence — Portfolio</title>
+    <meta name="description"
+        content="Découvrez : Modulation AM & Translation de fréquence. Portfolio de Fahd Cliquet-Benbrahim, étudiant en BUT Réseaux et Télécommunications (Cybersécurité) à l'IUT de Vélizy." />
+    <meta name="author" content="Fahd Cliquet-Benbrahim" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+
+</head>
+
+<body class="theme-telecoms">
+
+    <div class="bg-grid"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+
+    <div class="category-page">
+
+        <script src="../../assets/js/header.js" defer></script>
+
+        <!-- ══════════ PROJECT HERO ══════════ -->
+        <div class="project-hero">
+            <span class="project-hero-badge">Télécoms &amp; Signal — 1ère Année</span>
+            <h1>Modulation AM &amp; translation<br />de fréquence en <span class="gradient-text">temps réel</span></h1>
+            <div class="project-meta">
+                <span class="project-meta-pill">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="3" width="20" height="14" rx="2" />
+                        <path d="M8 21h8M12 17v4" />
+                    </svg>
+                    SAE 2.2
+                </span>
+                <span class="project-meta-pill">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                        <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                    </svg>
+                    BUT R&amp;T — Semestre 2
+                </span>
+                <span class="project-meta-pill">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10" />
+                        <polyline points="12 6 12 12 16 14" />
+                    </svg>
+                    24h + soutenance
+                </span>
+                <span class="project-meta-pill">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                        <circle cx="9" cy="7" r="4" />
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                    </svg>
+                    Binôme
+                </span>
+                <span class="project-meta-pill">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                        <circle cx="12" cy="10" r="3" />
+                    </svg>
+                    IUT Vélizy — UVSQ
+                </span>
+            </div>
+        </div>
+
+        <!-- ══════════ CONTENT ══════════ -->
+        <div class="project-body">
+
+            <!-- Contexte -->
+            <div class="proj-section">
+                <span class="proj-section-label">CONTEXTE</span>
+                <h2>De la radio AM au labo</h2>
+                <p class="accroche-text">
+                    La <strong>translation de fréquence</strong> est au cœur de toutes les transmissions
+                    hertziennes — Wifi (2,4 GHz), 4G, radio AM. Elle permet de décaler le spectre d'un signal
+                    vers une fréquence adaptée à la transmission, puis de le ramener à sa fréquence d'origine
+                    à la réception. Dans ce projet, on a reproduit ce mécanisme entre deux PC reliés par leurs
+                    <strong>cartes son</strong>, d'abord en simulation, puis en <strong>temps réel</strong>.
+                </p>
+            </div>
+
+            <!-- Objectifs -->
+            <div class="proj-section">
+                <span class="proj-section-label">OBJECTIFS</span>
+                <h2>Ce qu'on devait réaliser</h2>
+                <ul class="objectives-list">
+                    <li>
+                        <span class="obj-num">1</span>
+                        <span class="obj-text">Comprendre et modéliser mathématiquement la <strong>modulation
+                                AM</strong> et la <strong>démodulation synchrone</strong></span>
+                    </li>
+                    <li>
+                        <span class="obj-num">2</span>
+                        <span class="obj-text">Simuler la chaîne émetteur–récepteur AM dans un <strong>notebook
+                                Jupyter</strong></span>
+                    </li>
+                    <li>
+                        <span class="obj-num">3</span>
+                        <span class="obj-text">Implémenter la transmission en <strong>temps réel</strong> via cartes son
+                            USB entre deux PC</span>
+                    </li>
+                    <li>
+                        <span class="obj-num">4</span>
+                        <span class="obj-text">Mettre en œuvre un <strong>filtrage numérique en temps réel</strong>
+                            (passe-bas et passe-bande) avec SciPy</span>
+                    </li>
+                    <li>
+                        <span class="obj-num">5</span>
+                        <span class="obj-text">Résoudre le problème de <strong>synchronisation de la porteuse</strong>
+                            entre émetteur et récepteur</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Technologies -->
+            <div class="proj-section">
+                <span class="proj-section-label">TECHNOLOGIES</span>
+                <h2>Outils utilisés</h2>
+                <div class="tech-grid">
+                    <div class="tech-badge tech-python">
+                        <div class="tech-icon">Py</div>
+                        <div class="tech-info">
+                            <span class="tech-name">Python</span>
+                            <span class="tech-desc">Langage principal</span>
+                        </div>
+                    </div>
+                    <div class="tech-badge tech-numpy">
+                        <div class="tech-icon">Np</div>
+                        <div class="tech-info">
+                            <span class="tech-name">NumPy</span>
+                            <span class="tech-desc">Signaux, modulation/démodulation AM</span>
+                        </div>
+                    </div>
+                    <div class="tech-badge tech-scipy">
+                        <div class="tech-icon">Sc</div>
+                        <div class="tech-info">
+                            <span class="tech-name">SciPy</span>
+                            <span class="tech-desc">Filtrage numérique (passe-bas, passe-bande, SOS)</span>
+                        </div>
+                    </div>
+                    <div class="tech-badge tech-sound">
+                        <div class="tech-icon">♪</div>
+                        <div class="tech-info">
+                            <span class="tech-name">Sounddevice</span>
+                            <span class="tech-desc">Stream audio temps réel</span>
+                        </div>
+                    </div>
+                    <div class="tech-badge tech-soundfile">
+                        <div class="tech-icon">🎵</div>
+                        <div class="tech-info">
+                            <span class="tech-name">Soundfile</span>
+                            <span class="tech-desc">Chargement fichier .wav</span>
+                        </div>
+                    </div>
+                    <div class="tech-badge tech-mpl">
+                        <div class="tech-icon">📈</div>
+                        <div class="tech-info">
+                            <span class="tech-name">Matplotlib</span>
+                            <span class="tech-desc">Visualisation temporelle &amp; DSP</span>
+                        </div>
+                    </div>
+                    <div class="tech-badge tech-jupyter">
+                        <div class="tech-icon">Jn</div>
+                        <div class="tech-info">
+                            <span class="tech-name">Jupyter Notebook</span>
+                            <span class="tech-desc">Simulation &amp; rendu</span>
+                        </div>
+                    </div>
+                    <div class="tech-badge tech-oscillo">
+                        <div class="tech-icon">📟</div>
+                        <div class="tech-info">
+                            <span class="tech-name">Oscilloscope RTB2002</span>
+                            <span class="tech-desc">Vérification signal AM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fonctionnement -->
+            <div class="proj-section">
+                <span class="proj-section-label">FONCTIONNEMENT</span>
+                <h2>Les deux grandes étapes</h2>
+
+                <!-- Signal flow diagram -->
+                <div class="signal-flow">
+                    <div class="flow-node">
+                        <div class="flow-node-icon pc">💻</div>
+                        <span class="flow-node-label">PC Émetteur</span>
+                        <span class="flow-node-sub">Signal AM modulé</span>
+                    </div>
+                    <span class="flow-arrow">→</span>
+                    <div class="flow-node">
+                        <div class="flow-node-icon card">🔊</div>
+                        <span class="flow-node-label">Carte Son</span>
+                        <span class="flow-node-sub">USB — sortie</span>
+                    </div>
+                    <span class="flow-arrow">→</span>
+                    <div class="flow-node">
+                        <div class="flow-node-icon cable">🔌</div>
+                        <span class="flow-node-label">Câble Jack</span>
+                        <span class="flow-node-sub">Canal physique</span>
+                    </div>
+                    <span class="flow-arrow">→</span>
+                    <div class="flow-node">
+                        <div class="flow-node-icon card">🎙️</div>
+                        <span class="flow-node-label">Carte Son</span>
+                        <span class="flow-node-sub">USB — entrée</span>
+                    </div>
+                    <span class="flow-arrow">→</span>
+                    <div class="flow-node">
+                        <div class="flow-node-icon pc">💻</div>
+                        <span class="flow-node-label">PC Récepteur</span>
+                        <span class="flow-node-sub">Démodulation + filtre</span>
+                    </div>
+                </div>
+
+                <!-- Two steps -->
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-card-num">Partie 01</div>
+                        <h3>Simulation</h3>
+                        <ul>
+                            <li>Chargement d'un signal audio .wav, visualisation FFT et bande passante</li>
+                            <li>Modulation AM : x<sub>AM</sub>(t) = audio(t) × cos(2πf₀t) avec f₀ = 10 kHz</li>
+                            <li>Démodulation synchrone + filtrage passe-bas</li>
+                            <li>Test de l'impact d'un écart de fréquence (ex. porteuse à 10 000,1 Hz)</li>
+                        </ul>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-card-num">Partie 02</div>
+                        <h3>Transmission temps réel</h3>
+                        <ul>
+                            <li>Deux PC reliés par câble jack + cartes son USB</li>
+                            <li>Stream audio sortant (signal AM) et entrant (filtré) en temps réel</li>
+                            <li>Transmission AM avec porteuse pour résoudre la synchronisation</li>
+                            <li>Récupération porteuse par filtre passe-bande (9 900 – 10 100 Hz, ordre 12)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Formulas -->
+                <div class="formula-block inline-5bc84b">
+                    <span class="formula">x<sub>AM</sub>(t) = audio(t) × cos(2πf<sub>0</sub>t)</span>
+                    <span class="formula">x<sub>AMP</sub>(t) = audio(t) × cos(2πf<sub>0</sub>t) + k ·
+                        cos(2πf<sub>0</sub>t)</span>
+                </div>
+            </div>
+
+            <!-- Résultats -->
+            <div class="proj-section">
+                <span class="proj-section-label">RÉSULTATS</span>
+                <h2>Résultats obtenus</h2>
+                <div class="results-placeholder">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M12 6v6l4 2" />
+                    </svg>
+                    Résultats à venir…
+                </div>
+            </div>
+
+        </div>
+
+        <script src="../../assets/js/footer.js" defer></script>
+
+    </div>
+
+</body>
+
+</html>
+

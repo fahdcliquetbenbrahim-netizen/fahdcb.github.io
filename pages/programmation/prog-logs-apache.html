@@ -1,0 +1,289 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analyse des logs Apache — Portfolio</title>
+    <meta name="description"
+        content="Découvrez : Analyse des logs Apache. Portfolio de Fahd Cliquet-Benbrahim, étudiant en BUT Réseaux et Télécommunications (Cybersécurité) à l'IUT de Vélizy." />
+    <meta name="author" content="Fahd Cliquet-Benbrahim" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+
+</head>
+
+<body class="theme-prog">
+
+    <div class="bg-grid"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+
+    <div class="category-page">
+
+        <script src="../../assets/js/header.js" defer></script>
+
+        <!-- ══════════ PROJECT HERO ══════════ -->
+        <div class="project-hero">
+            <span class="project-hero-badge">Programmation — Semestre 1</span>
+            <h1>Analyse statistique des<br />logs <span class="gradient-text">Apache</span> en trois interfaces</h1>
+            <div class="project-meta">
+                <span class="project-meta-pill">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="3" width="20" height="14" rx="2" />
+                        <path d="M8 21h8M12 17v4" />
+                    </svg>
+                    SAE 1.5
+                </span>
+                <span class="project-meta-pill">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                        <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                    </svg>
+                    BUT R&amp;T — Semestre 1
+                </span>
+                <span class="project-meta-pill">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10" />
+                        <polyline points="12 6 12 12 16 14" />
+                    </svg>
+                    Rendu : 12 janvier 2025
+                </span>
+                <span class="project-meta-pill">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                        <circle cx="9" cy="7" r="4" />
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                    </svg>
+                    Binôme
+                </span>
+                <span class="project-meta-pill">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                        <circle cx="12" cy="10" r="3" />
+                    </svg>
+                    IUT Vélizy — UVSQ
+                </span>
+            </div>
+        </div>
+
+        <!-- ══════════ CONTENT ══════════ -->
+        <div class="project-body">
+
+            <!-- Contexte -->
+            <div class="proj-section">
+                <span class="proj-section-label">CONTEXTE</span>
+                <h2>Comprendre le trafic d'un serveur web</h2>
+                <p class="accroche-text">
+                    Un webmaster ou administrateur système a besoin de savoir <strong>qui se connecte</strong> à son
+                    serveur, quand, et combien de fois — c'est le rôle des fichiers de <strong>logs</strong>.
+                    Ce projet consistait à développer en <strong>langage C</strong> un programme qui lit et analyse
+                    les logs d'un serveur Apache, puis restitue les statistiques sous trois formes différentes :
+                    interface web (CGI), fenêtre graphique, et terminal texte.
+                </p>
+            </div>
+
+            <!-- Objectifs -->
+            <div class="proj-section">
+                <span class="proj-section-label">OBJECTIFS</span>
+                <h2>Ce qu'on devait réaliser</h2>
+                <ul class="objectives-list">
+                    <li>
+                        <span class="obj-num">1</span>
+                        <span class="obj-text">Parser le fichier <strong>/var/log/apache2/access.log</strong> au format
+                            Common Log Format (CLF)</span>
+                    </li>
+                    <li>
+                        <span class="obj-num">2</span>
+                        <span class="obj-text">Calculer le <strong>nombre total de requêtes</strong> et leur
+                            distribution mensuelle en pourcentage</span>
+                    </li>
+                    <li>
+                        <span class="obj-num">3</span>
+                        <span class="obj-text">Proposer <strong>trois modes d'affichage</strong> : web (CGI), graphique
+                            (histogramme) et texte (terminal)</span>
+                    </li>
+                    <li>
+                        <span class="obj-num">4</span>
+                        <span class="obj-text">Mettre en place un <strong>Proof of Concept complet</strong> et
+                            déployable sur un serveur Apache réel</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Technologies -->
+            <div class="proj-section">
+                <span class="proj-section-label">TECHNOLOGIES</span>
+                <h2>Outils utilisés</h2>
+                <div class="tech-grid">
+                    <div class="tech-badge tech-c">
+                        <div class="tech-icon">C</div>
+                        <div class="tech-info">
+                            <span class="tech-name">C</span>
+                            <span class="tech-desc">Langage de développement principal</span>
+                        </div>
+                    </div>
+                    <div class="tech-badge tech-apache">
+                        <div class="tech-icon">Ap</div>
+                        <div class="tech-info">
+                            <span class="tech-name">Apache2</span>
+                            <span class="tech-desc">Serveur web hébergeant le CGI</span>
+                        </div>
+                    </div>
+                    <div class="tech-badge tech-cgi">
+                        <div class="tech-icon">⚡</div>
+                        <div class="tech-info">
+                            <span class="tech-name">CGI</span>
+                            <span class="tech-desc">Interface web dynamique</span>
+                        </div>
+                    </div>
+                    <div class="tech-badge tech-libgraph">
+                        <div class="tech-icon">📊</div>
+                        <div class="tech-info">
+                            <span class="tech-name">libgraphique</span>
+                            <span class="tech-desc">Affichage graphique (histogramme)</span>
+                        </div>
+                    </div>
+                    <div class="tech-badge tech-html">
+                        <div class="tech-icon">🌐</div>
+                        <div class="tech-info">
+                            <span class="tech-name">HTML / CSS</span>
+                            <span class="tech-desc">Page web résultat</span>
+                        </div>
+                    </div>
+                    <div class="tech-badge tech-make">
+                        <div class="tech-icon">Mk</div>
+                        <div class="tech-info">
+                            <span class="tech-name">Makefile</span>
+                            <span class="tech-desc">Compilation &amp; installation</span>
+                        </div>
+                    </div>
+                    <div class="tech-badge tech-linux">
+                        <div class="tech-icon">🐧</div>
+                        <div class="tech-info">
+                            <span class="tech-name">Linux / VirtualBox</span>
+                            <span class="tech-desc">VM Debian 11</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Les trois interfaces -->
+            <div class="proj-section">
+                <span class="proj-section-label">FONCTIONNEMENT</span>
+                <h2>Les trois interfaces du programme</h2>
+                <div class="interfaces-grid">
+                    <div class="iface-card">
+                        <div class="iface-card-icon">🌐</div>
+                        <h3>Interface Web</h3>
+                        <p>Le programme se comporte comme un <strong>CGI-BIN</strong> : il génère du code HTML avec
+                            <code>printf()</code>, lu et interprété par Apache. L'histogramme s'affiche dans le
+                            navigateur.
+                        </p>
+                        <p class="inline-d79ce2"><code>mode par défaut</code></p>
+                    </div>
+                    <div class="iface-card">
+                        <div class="iface-card-icon">📊</div>
+                        <h3>Interface Graphique</h3>
+                        <p>Une fenêtre s'ouvre avec <strong>libgraphique</strong> et affiche les barres de l'histogramme
+                            avec les valeurs en pourcentage par mois.</p>
+                        <p class="inline-d79ce2"><code>-gr</code></p>
+                    </div>
+                    <div class="iface-card">
+                        <div class="iface-card-icon">💻</div>
+                        <h3>Interface Texte</h3>
+                        <p>Le programme affiche directement dans le <strong>terminal</strong> le nombre total de
+                            connexions et la répartition mensuelle en pourcentage.</p>
+                        <p class="inline-d79ce2"><code>-txt</code></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Structure du projet -->
+            <div class="proj-section">
+                <span class="proj-section-label">STRUCTURE</span>
+                <h2>Organisation du projet livré</h2>
+                <ul class="structure-list">
+                    <li>Fichiers sources <strong>.c</strong> et <strong>.h</strong> dans <code
+                            class="inline-707a44">RT1SA05/src/</code>
+                    </li>
+                    <li><strong>Makefile</strong> fonctionnel (compilation + installation automatique)</li>
+                    <li>Fichiers <strong>HTML/CSS</strong> pour l'interface web</li>
+                    <li><strong>Rapport PDF</strong> avec algorithmes en pseudo-code, structures de données et captures
+                    </li>
+                    <li>Archive <strong>.tgz</strong> correctement nommée et soumise sur eCampus</li>
+                </ul>
+
+                <div class="code-block">Depuis le 21/Feb/2016 on a enregistre 186181 connexions.
+                    Janvier : 19.5%
+                    Septembre: 16.1%
+                    Octobre : 16.3%
+                    ...</div>
+            </div>
+
+            <!-- Résultats -->
+            <div class="proj-section">
+                <span class="proj-section-label">RÉSULTATS</span>
+                <h2>Résultats obtenus</h2>
+                <div class="results-placeholder">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M12 6v6l4 2" />
+                    </svg>
+                    Captures d'écran à venir…
+                </div>
+            </div>
+
+            <!-- Compétences -->
+            <div class="proj-section">
+                <span class="proj-section-label">COMPÉTENCES</span>
+                <h2>Ce que j'ai appris</h2>
+                <ul class="skills-learned">
+                    <li>
+                        <span class="skill-icon">⌨️</span>
+                        <span><strong>Programmation en C</strong> : parsing de fichiers, structures de données, gestion
+                            de la mémoire</span>
+                    </li>
+                    <li>
+                        <span class="skill-icon">🌐</span>
+                        <span><strong>Interface CGI</strong> : générer du HTML dynamique depuis un programme C</span>
+                    </li>
+                    <li>
+                        <span class="skill-icon">🔍</span>
+                        <span><strong>Analyse descendante (top-down)</strong> : décomposer un problème complexe en
+                            sous-fonctions</span>
+                    </li>
+                    <li>
+                        <span class="skill-icon">🐧</span>
+                        <span><strong>Administration Linux</strong> : compilation avec Makefile, déploiement sur serveur
+                            Apache, utilisation de sudo</span>
+                    </li>
+                    <li>
+                        <span class="skill-icon">📋</span>
+                        <span><strong>Rigueur de rendu</strong> : nommage de fichiers, arborescence, rapport
+                            technique</span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <script src="../../assets/js/footer.js" defer></script>
+
+    </div>
+
+</body>
+
+</html>
+
