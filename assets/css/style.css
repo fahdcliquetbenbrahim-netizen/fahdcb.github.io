@@ -1113,20 +1113,12 @@ body {
   }
 
   .years-container {
-    flex-direction: row;
-    overflow-x: auto;
-    overflow-y: hidden;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    padding-bottom: 24px;
-    padding-left: 20px;
-    padding-right: 20px;
+    flex-direction: column;
+    padding-bottom: 32px;
   }
 
-  .year-block {
-    min-width: 85vw;
-    scroll-snap-align: center;
-    flex: 0 0 auto;
+  .year-title {
+    white-space: normal;
   }
 }
 
