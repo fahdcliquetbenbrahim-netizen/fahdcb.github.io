@@ -281,13 +281,36 @@
             <div class="proj-section">
                 <span class="proj-section-label">RÉSULTATS</span>
                 <h2>Résultats obtenus</h2>
-                <div class="results-placeholder">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="10" />
-                        <path d="M12 6v6l4 2" />
-                    </svg>
-                    Schémas, captures &amp; fichier audio à venir…
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+                    <div class="result-card result-card--has-img"
+                        style="height: 100%; display: flex; flex-direction: column;"
+                        onclick="document.getElementById('lightbox-mitm').classList.add('lightbox-open')">
+                        <img class="result-card-thumb" src="../../assets/images/mitm-voip-architecture.png"
+                            alt="Architecture MITM VoIP" style="flex: 1; min-height: 0;" />
+                        <div class="result-card-overlay-text">Architecture MITM</div>
+                        <div class="result-card-reveal">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8" />
+                                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                                <line x1="11" y1="8" x2="11" y2="14" />
+                                <line x1="8" y1="11" x2="14" y2="11" />
+                            </svg>
+                            Cliquer pour voir
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 24px;">
+                        <div class="result-card"
+                            style="flex: 1; display: flex; align-items: center; justify-content: center; border: 2px dashed var(--border); background: transparent;">
+                            <span style="color: var(--text-muted); font-size: 0.9rem;">Emplacement image 1 à
+                                venir</span>
+                        </div>
+                        <div class="result-card"
+                            style="flex: 1; display: flex; align-items: center; justify-content: center; border: 2px dashed var(--border); background: transparent;">
+                            <span style="color: var(--text-muted); font-size: 0.9rem;">Emplacement image 2 à
+                                venir</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -330,11 +353,53 @@
 
         </div>
 
+        <script>document.addEventListener('keydown', e => { if (e.key === 'Escape') { document.querySelectorAll('.lightbox-open').forEach(el => el.classList.remove('lightbox-open')) } });</script>
         <script src="../../assets/js/footer.js" defer></script>
+    </div>
 
+    <!-- Lightbox MITM VoIP Architecture -->
+    <div class="lightbox-overlay" id="lightbox-mitm"
+        onclick="if(event.target===this)this.classList.remove('lightbox-open')">
+        <button class="lightbox-close"
+            onclick="document.getElementById('lightbox-mitm').classList.remove('lightbox-open')">&times;</button>
+        <div class="lightbox-body">
+            <div class="browser-window">
+                <div class="browser-chrome">
+                    <div class="browser-tabs">
+                        <div class="browser-dots">
+                            <span class="browser-dot browser-dot--red"></span>
+                            <span class="browser-dot browser-dot--yellow"></span>
+                            <span class="browser-dot browser-dot--green"></span>
+                        </div>
+                        <div class="browser-tab">
+                            <div class="browser-tab-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                                </svg></div>
+                            Résultats — MITM VoIP
+                        </div>
+                    </div>
+                    <div class="browser-url-bar">
+                        <span class="browser-lock"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                            </svg></span>
+                        <span
+                            class="browser-url-text"><strong>portfolio.fahd.dev</strong>/prog/resultats-mitm-voip</span>
+                    </div>
+                </div>
+                <div class="browser-content">
+                    <img src="../../assets/images/mitm-voip-architecture.png"
+                        alt="Architecture réseau SAE24 MITM VoIP incluant routeur, switch, DMZ, et téléphones IP avec interception du flux par un attaquant"
+                        style="width:100%; display:block;" />
+                </div>
+            </div>
+        </div>
     </div>
 
 </body>
 
 </html>
-
