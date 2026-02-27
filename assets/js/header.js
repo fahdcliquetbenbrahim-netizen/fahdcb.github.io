@@ -1,5 +1,15 @@
 ﻿document.addEventListener('DOMContentLoaded', function () {
+  // ── Save real path before masking URL ──
   var path = window.location.pathname.toLowerCase();
+  window.__realPath = path; // expose for footer.js
+
+  // ── Mask URL: always show root path in the address bar ──
+  if (window.location.protocol !== 'file:') {
+    try {
+      var rootUrl = window.location.origin + '/';
+      history.replaceState(null, '', rootUrl);
+    } catch (e) { }
+  }
   var isHome =
     path === '' ||
     path === '/' ||
@@ -54,9 +64,9 @@
   if (isHome) {
     headerHTML = `
     <header class="hero-header">
-      <div class="logo">
+      <a href="${rootPath}pages/autres/portfolio-about.html" class="logo" style="text-decoration:none;">
         <span class="logo-bracket">&lt;</span>Portfolio<span class="logo-bracket">/&gt;</span>
-      </div>
+      </a>
       <div class="header-title">
         <span class="header-site-name">Fahd Cliquet-Benbrahim</span>
         <span class="header-site-sub">BUT R&amp;T · Cybersécurité · IUT Vélizy</span>
@@ -69,7 +79,12 @@
   } else {
     headerHTML = `
     <header class="cat-header">
-      ${backBtn}
+      <div style="display:flex; align-items:center; gap:20px;">
+        ${backBtn}
+        <a href="${rootPath}pages/autres/portfolio-about.html" class="logo" style="text-decoration:none;">
+          <span class="logo-bracket">&lt;</span>Portfolio<span class="logo-bracket">/&gt;</span>
+        </a>
+      </div>
       <div class="header-title">
         <span class="header-site-name">Fahd Cliquet-Benbrahim</span>
         <span class="header-site-sub">BUT R&amp;T · Cybersécurité · IUT Vélizy</span>

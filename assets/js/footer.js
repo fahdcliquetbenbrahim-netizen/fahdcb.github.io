@@ -3,7 +3,7 @@
  * Injecte le footer identique sur toutes les pages.
  */
 document.addEventListener('DOMContentLoaded', function () {
-  var path = window.location.pathname.toLowerCase();
+  var path = (window.__realPath || window.location.pathname).toLowerCase();
   var rootPath = path.indexOf('/pages/') !== -1 ? '../../' : '';
 
   var footerHTML = `
