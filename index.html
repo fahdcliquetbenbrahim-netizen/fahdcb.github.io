@@ -1266,34 +1266,34 @@
             </a>
             <nav class="nav-items">
                 <div class="email-popup-wrapper">
-                  <button class="header-email-btn" id="emailToggleBtn" title="Contact">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <rect x="2" y="4" width="20" height="16" rx="2"/>
-                      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
-                    </svg>
-                  </button>
-                  <div class="email-popup" id="emailPopup">
-                    <span class="email-popup-addr">fahdcb@outlook.fr</span>
-                    <button class="email-copy-btn" id="emailCopyBtn" title="Copier l'adresse">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                           stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="9" y="2" width="13" height="13" rx="2"/>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
-                      </svg>
+                    <button class="header-email-btn" id="emailToggleBtn" title="Contact">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="4" width="20" height="16" rx="2" />
+                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                        </svg>
                     </button>
-                  </div>
+                    <div class="email-popup" id="emailPopup">
+                        <span class="email-popup-addr">fahdcb@outlook.fr</span>
+                        <button class="email-copy-btn" id="emailCopyBtn" title="Copier l'adresse">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="9" y="2" width="13" height="13" rx="2" />
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
 
                 <!-- CV Button -->
                 <a href="assets/docs/cv.pdf" download class="cv-btn">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                       stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                    <polyline points="7 10 12 15 17 10"/>
-                    <line x1="12" y1="15" x2="12" y2="3"/>
-                  </svg>
-                  CV
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                        <polyline points="7 10 12 15 17 10" />
+                        <line x1="12" y1="15" x2="12" y2="3" />
+                    </svg>
+                    CV
                 </a>
 
                 <div class="nav-badge">En ligne</div>
@@ -1378,7 +1378,7 @@
                         <div>
                             <div class="hero-tag">Projets &amp; Réalisations</div>
                             <h1 class="hero-h1">Mes <span class="grad">Projets</span></h1>
-                            <p class="hero-desc">Explorez mes réalisations par domaine d'expertise.</p>
+                            <p class="hero-desc">Découvrez mes projets réalisés durant mes 2 années de BUT.</p>
                         </div>
                         <div class="hero-num">04</div>
                     </div>
@@ -1397,7 +1397,8 @@
                             </svg>
                         </div>
                         <h2 class="card-title">Infrastructure<br />Multi-sites</h2>
-                        <p class="card-text">Configuration et déploiement d'une architecture réseau multi-sites sécurisée.</p>
+                        <p class="card-text">Configuration et déploiement d'une architecture réseau multi-sites
+                            sécurisée.</p>
                         <div class="card-cta">
                             Accéder
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
@@ -1458,7 +1459,8 @@
                             </svg>
                         </div>
                         <h2 class="card-title">Challenge FTP<br />Sécurisé</h2>
-                        <p class="card-text">Mise en place d'un serveur FTP sécurisé dans le cadre d'un défi technique.</p>
+                        <p class="card-text">Mise en place d'un serveur FTP sécurisé dans le cadre d'un défi technique.
+                        </p>
                         <div class="card-cta">
                             Accéder
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
@@ -1699,7 +1701,7 @@
         })();
 
         /* ── Email Popup ─────────────────────────────────── */
-        (function() {
+        (function () {
             const btn = document.getElementById('emailToggleBtn');
             const popup = document.getElementById('emailPopup');
             const copyBtn = document.getElementById('emailCopyBtn');
@@ -1725,7 +1727,7 @@
                 e.stopPropagation();
                 navigator.clipboard.writeText(emailAddr).then(() => {
                     const originalHTML = copyBtn.innerHTML;
-                    
+
                     // Passer en succès
                     copyBtn.classList.add('copied');
                     copyBtn.innerHTML = `
@@ -1734,7 +1736,7 @@
                           <polyline points="20 6 9 17 4 12"></polyline>
                         </svg>
                     `;
-                    
+
                     // Rétablir après 2s
                     setTimeout(() => {
                         copyBtn.classList.remove('copied');

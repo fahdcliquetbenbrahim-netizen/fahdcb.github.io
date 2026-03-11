@@ -790,10 +790,9 @@
 
     .context-layout {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
+      grid-template-columns: 1fr 1.6fr;
+      gap: 40px;
       align-items: start;
-      margin-top: 24px;
     }
 
     .lab-images {
@@ -1144,6 +1143,69 @@
         max-width: 140px;
       }
     }
+    
+    /* ── LIGHTBOX ── */
+    #lightbox-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.85);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    #lightbox-overlay.open {
+      display: flex;
+      opacity: 1;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 24px;
+      right: 32px;
+      background: var(--orange);
+      color: var(--white);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      font-size: 24px;
+      font-weight: bold;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10000;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transition: transform 0.2s;
+    }
+
+    .lightbox-close:hover {
+      transform: scale(1.1);
+      background: var(--orange-dark);
+    }
+
+    .lightbox-body {
+      max-width: 1200px;
+      width: 100%;
+      max-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .lightbox-body img {
+      max-width: 100%;
+      max-height: 90vh;
+      object-fit: contain;
+      border-radius: 12px;
+      border: 6px solid #f6f6f6;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+      background: #f6f6f6;
+    }
   </style>
 </head>
 
@@ -1269,10 +1331,10 @@
 
       <!-- Contexte -->
       <div class="proj-section">
-        <span class="proj-section-label">CONTEXTE</span>
-        <h2>Un vrai problème opérateur</h2>
         <div class="context-layout">
           <div>
+            <span class="proj-section-label">CONTEXTE</span>
+            <h2>Un vrai problème opérateur</h2>
             <p class="accroche-text">
               Chez <strong>Orange</strong>, des équipes entières sont dédiées à détecter les perturbateurs
               électromagnétiques (moteurs d'ascenseur, alimentations défectueuses…) qui dégradent les lignes
@@ -1283,9 +1345,11 @@
             </p>
           </div>
           <div>
-            <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=700&q=70&auto=format&fit=crop"
-              alt="Câbles réseau et infrastructure télécoms" class="section-img" style="height:220px;" />
-            <p class="section-img-caption">Infrastructure télécom — câblage cuivre ADSL</p>
+            <img src="../assets/images/adsl-architecture-projet.png"
+              alt="Application à Notre Projet ADSL" class="section-img" 
+              style="margin-top: 0; box-shadow: 0 4px 16px rgba(0,0,0,0.08); cursor: pointer;"
+              onclick="openLightbox(this)" />
+            <p class="section-img-caption" style="margin-top: 12px;">Architecture globale et modulation OFDM/DMT <span style="font-size: 11px; color: var(--orange);">(Cliquez pour agrandir)</span></p>
           </div>
         </div>
       </div>
@@ -1373,9 +1437,11 @@
             </tbody>
           </table>
         </div>
-        <img src="https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=1200&q=70&auto=format&fit=crop"
-          alt="Serveurs et architecture réseau" class="section-img" style="height:260px;" />
-        <p class="section-img-caption">Architecture serveur — back-end Python / FastAPI déployé sur Linux</p>
+        <img src="../assets/images/adsl-api-rest-architecture.png"
+          alt="Interaction logicielle et gestion des données : API REST" class="section-img" 
+          style="height:auto; box-shadow: 0 4px 16px rgba(0,0,0,0.08); cursor: pointer;"
+          onclick="openLightbox(this)" />
+        <p class="section-img-caption">Architecture serveur — back-end Python / FastAPI déployé sur Linux <span style="font-size: 11px; color: var(--orange);">(Cliquez pour agrandir)</span></p>
       </div>
 
       <!-- Technologies -->
@@ -1452,50 +1518,43 @@
               paramètres simultanément.</p>
           </div>
         </div>
-      </div>
 
-      <!-- Tests sur ligne réelle -->
-      <div class="proj-section">
-        <span class="proj-section-label">TESTS EN LABO</span>
-        <h2>Tests sur ligne réelle</h2>
-        <p class="inline-14c80d">
-          C'est ce qui distingue ce projet — travail sur du <strong>matériel réel</strong> en labo avec une
-          ligne ADSL2+ simulée à l'aide de bobines de câble de 1 km (2 km total).
-        </p>
-
-        <div class="lab-images">
-          <div class="lab-img-card">
-            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=700&q=70&auto=format&fit=crop"
-              alt="Équipement électronique en laboratoire" />
-            <div class="lab-img-label">Matériel de labo — câblage et équipements</div>
+        <div class="browser-window" style="margin-top: 32px;">
+          <div class="browser-chrome">
+            <div class="browser-tabs">
+              <div class="browser-dots">
+                <span class="browser-dot browser-dot--red"></span>
+                <span class="browser-dot browser-dot--yellow"></span>
+                <span class="browser-dot browser-dot--green"></span>
+              </div>
+              <div class="browser-tab">
+                <div class="browser-tab-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                  </svg>
+                </div>
+                Interface d'Analyse ADSL
+              </div>
+            </div>
+            <div class="browser-url-bar">
+              <span class="browser-lock">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                </svg>
+              </span>
+              <span
+                class="browser-url-text"><strong>portfolio.fahd.dev</strong>/telecoms/analyse</span>
+            </div>
           </div>
-          <div class="lab-img-card">
-            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=700&q=70&auto=format&fit=crop"
-              alt="Mesures et signaux réseau" />
-            <div class="lab-img-label">Analyse de signal — perturbateurs EM</div>
+          <div class="browser-content">
+            <img src="../assets/images/adsl-interface-configuration.png"
+              alt="Aperçu de l'interface graphique du projet d'analyse ADSL/VDSL2"
+              style="width:100%;height:auto;object-fit:cover;display:block; cursor: pointer;"
+              onclick="openLightbox(this)" />
           </div>
-        </div>
-
-        <div class="tests-grid" style="margin-top:20px;">
-          <div class="test-card">
-            <h3>🔊 Perturbateur sinusoïdal</h3>
-            <p>Antenne AM + GBF placés près du câble. Observation de la <strong>chute du SNR</strong> et adaptation
-              automatique de la modulation sur les sous-porteuses affectées.</p>
-            <span class="test-highlight">Impact → SNR</span>
-          </div>
-          <div class="test-card">
-            <h3>⚡ Alimentation défectueuse</h3>
-            <p>Alimentation posée à proximité du câble. Impact direct sur le <strong>BitAlloc</strong> : réduction du
-              nombre de bits par symbole sur les fréquences perturbées.</p>
-            <span class="test-highlight">Impact → BitAlloc</span>
-          </div>
-        </div>
-        <div class="test-card inline-f4e330">
-          <h3>📊 Analyse statistique</h3>
-          <p>Calcul du <strong>SNR min/max/moyen</strong> par nombre de bits par symbole (0 à 15) avec
-            <code>defaultdict</code> et <code>tabulate</code>. Permet de quantifier précisément l'impact de chaque
-            perturbateur.
-          </p>
         </div>
       </div>
 
@@ -1534,9 +1593,10 @@
             </div>
           </div>
           <div class="browser-content">
-            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=70&auto=format&fit=crop"
-              alt="Graphiques d'analyse de données réseau"
-              style="width:100%;height:280px;object-fit:cover;display:block;" />
+            <img src="../assets/images/adsl-resultats-perturbations.png"
+              alt="Graphiques d'analyse des perturbations ADSL (SNR, QLN, HLOG, BitAlloc)"
+              style="width:100%;height:auto;object-fit:cover;display:block; cursor: pointer;"
+              onclick="openLightbox(this)" />
           </div>
         </div>
       </div>
@@ -1620,7 +1680,30 @@
 
   </div>
 
+  <div id="lightbox-overlay" onclick="closeLightbox()">
+    <div class="lightbox-close" onclick="closeLightbox()">&times;</div>
+    <div class="lightbox-body" onclick="event.stopPropagation()">
+      <img id="lightbox-img" src="" alt="Image plein écran">
+    </div>
+  </div>
+
   <script>
+    /* ── Lightbox ── */
+    function openLightbox(imgElement) {
+      document.getElementById('lightbox-img').src = imgElement.src;
+      document.getElementById('lightbox-overlay').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox-overlay').classList.remove('open');
+      document.body.style.overflow = 'auto';
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeLightbox();
+    });
+
     /* ── Désactivation du zoom tactile ── */
     // Bloquer le pinch-to-zoom (2 doigts)
     document.addEventListener('touchmove', function (e) {
